@@ -12,6 +12,6 @@
  * Commits are save points, created manually when important changes are made.
   Commit command follows by a message that provides meaningful information about changes.
 
-* What is a merge conflict?
- * Merge conflict is an obstacle that can arise at the merging feature branch into master if master branch has been changed since feature branch was started.  
+* last question has been deleted !!!
+  
  
