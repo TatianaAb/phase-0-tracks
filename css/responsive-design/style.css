@@ -1,9 +1,13 @@
   body {
-    width: 960px;
+    max-width: 960px;
+    min-width: 420px;
   }
 
   main {
-    width: 756px;
+    width: 70%;
+  }
+  aside {
+    width: 25%;
   }
 
   main, aside {
@@ -22,11 +26,11 @@ cite {
   margin-top: 10px;
 }
 
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
-  width: 200px;
-}
+  }
 
 
 /* you're welcome to edit the
@@ -44,4 +48,9 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
 }
