@@ -1,0 +1,23 @@
+Release 0
+
+- Move forward until an elevator door is reached.
+- Press round button on your left side. 
+- When door is open come inside and turn around.
+- On your left side is five rows of buttons, press second button in third row (with number "5" on it).
+- When door open on floor with number that match pressed button number, come out of elevator.
+
+Release 1
+
+# My breakfast 
+
+- Open fridge and take out eggs, milk and cheese. 
+- Turn the gas on and put frying pan over it
+  - until it's hot.
+- Beat eggs into a bowl and whisk it.
+  - add milk, cheese and salt and mix.
+- Pour this mixture into hot frying pan.
+- Cook 3 min
+- Then flip it on the other side and cook 1 more min.
+- Turn pan and slide omelet onto plate. 
+- Consume immediately  
+
