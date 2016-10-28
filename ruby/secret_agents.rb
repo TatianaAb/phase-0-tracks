@@ -11,8 +11,8 @@ def encrypt(str)
  while i < str.length 
    if str[i] == " "
      output+=" "
-     i+=1
-     next
+   elsif str[i] == "z"
+     output += "a"    
    else
     output += str[i].next
    end
@@ -21,7 +21,7 @@ def encrypt(str)
  output
 end
 
-p encrypt("abc fer")
+# p encrypt("abc fer")
 
 # Create a decrypt method.
 # Take each character of a string 
@@ -38,8 +38,8 @@ def decrypt(str)
   char = str[i]
   if str[i] == " "
      output+=" "
-     i+=1
-     next
+  elsif str[i] == "a"
+     output += "z"    
   else 
    b = alphabet.index(char) - 1
    output += alphabet[b]
@@ -49,4 +49,28 @@ end
 output
 end
 
-p decrypt("hey there")
+# p decrypt("hey there")
+# p encrypt("zed")
+# p decrypt("ared")
+# p decrypt(encrypt("swordfish"))
+
+# Release 4 nested method calls
+# It works because parent method 
+# is called upon the output of the nested method.
+
+# Release 5
+# Ask user for choice
+# Ask for password 
+# Based on user's choice choose how to handle the password.
+# Return either encrypted or decrypted password.  
+
+puts "Would you like decrypt or encrypt your password?"
+choice = gets.chomp
+puts "password?"
+password = gets.chomp
+ if choice == "decrypt"
+   puts decrypt(password)
+ elsif choice == "encrypt"
+   puts encrypt(password)
+ end   
+ puts "Thank you!"
