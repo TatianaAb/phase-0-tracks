@@ -1,0 +1,9 @@
+Release 0
+
+- Move forward until an elevator door is reached.
+- Press round button on your left side. 
+- When door is open come inside and turn around.
+- On your left side is five rows of buttons, press second button in third row (with number "5" on it).
+- When door open on floor with number that match pressed button number, come out of elevator.
+
+
