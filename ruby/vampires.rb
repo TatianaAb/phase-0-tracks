@@ -4,7 +4,7 @@
 def questionnaire 
 
  puts "What is your name?"
- emp_name=gets.chomp
+ emp_name=gets.chomp.downcase
 
  puts "How old are you?" 
  age=gets.chomp.to_i
@@ -23,22 +23,28 @@ def questionnaire
 
  puts "Our company cafeteria serves garlic bread. 
  Should we order some for you?"
- g_eater=gets.chomp
+ g_eater=gets.chomp.downcase
 
  g_eater == "yes" ? g_eater = true: g_eater=false
 
  puts "Would you like to enroll in the company’s 
  health insurance? "
- ins=gets.chomp
+ ins=gets.chomp.downcase
 
  ins=="yes" ? ins = true: ins=false
 
  puts "Do you have any allergies?"
- allergies = gets.chomp
 
- until allergies == "done" || allergies == "sunshine"
-  puts "Please indicate another allergies if any or type done if finished "
+ while allergies = gets.chomp.downcase
+  case allergies
+  when "sunshine"
+    break
+  when "done" 
+    break
+  else 
+    puts "Please indicate another allergies if any or type done if finished "
   end 
+ end
 
  # If the employee got their age right, 
  # and is willing to eat garlic bread or 
@@ -63,9 +69,7 @@ def questionnaire
 # is clearly a vampire, because come on. In that case, 
 # you should print “Definitely a vampire.”
 
- r = "Definitely a vampire!" if emp_name == "Drake Cula" || emp_name == "Tu Fang" 
-
- puts r
+ r = "Definitely a vampire!" if emp_name == "drake cula" || emp_name == "tu fang" 
 
 # Otherwise, print “Results inconclusive.”
  if r 
@@ -81,3 +85,6 @@ until emp_number == 0
   questionnaire
   emp_number -= 1
 end  
+
+puts "Actually, never mind! What do these questions 
+have to do with anything? Let's all be friends!"
