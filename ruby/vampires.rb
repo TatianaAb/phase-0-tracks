@@ -32,7 +32,14 @@ def questionnaire
  ins=gets.chomp
 
  ins=="yes" ? ins = true: ins=false
-  
+
+ puts "Do you have any allergies?"
+ allergies = gets.chomp
+
+ until allergies == "done" || allergies == "sunshine"
+  puts "Please indicate another allergies if any or type done if finished "
+  end 
+
  # If the employee got their age right, 
  # and is willing to eat garlic bread or 
  # sign up for insurance, the result is “Probably not a vampire.”
@@ -43,7 +50,7 @@ def questionnaire
  # and hates garlic bread or waives insurance,
  # the result is “Probably a vampire.”
 
- r = 'Probably a vampire' if !age && (!g_eater || !ins)
+ r = 'Probably a vampire' if (!age && (!g_eater || !ins)) || allergies == "sunshine"
   
 # If the employee got their age wrong, 
 # hates garlic bread, and doesn’t want insurance, 
