@@ -1,8 +1,10 @@
 # New employee file
 # Ask the new employee the following questions.
 
+
+
 puts "What is your name?"
-name=gets.chomp
+emp_name=gets.chomp
 
 puts "How old are you?" 
 age=gets.chomp.to_i
@@ -34,34 +36,32 @@ ins=="yes" ? ins = true: ins=false
 # If the employee got their age right, 
 # and is willing to eat garlic bread or 
 # sign up for insurance, the result is “Probably not a vampire.”
-case
-when age && (g_eater || ins)
- puts "Probably not a vampire."
+
+r = 'Probably not a vampire.' if age && (g_eater || ins)
 
 # If the employee got their age wrong, 
 # and hates garlic bread or waives insurance,
 # the result is “Probably a vampire.”
 
-when !age && (!g_eater || !ins)
- puts "Probably a vampire"
-
+r = 'Probably a vampire' if !age && (!g_eater || !ins)
+  
 # If the employee got their age wrong, 
 # hates garlic bread, and doesn’t want insurance, 
 # the result is “Almost certainly a vampire.”
 
-when !age && !g_eater && !ins
- puts "Almost certainly a vampire."
-
+r = 'Almost certainly a vampire' if !age && !g_eater && !ins 
+  
 # Even if the employee is an amazing liar otherwise,
 # anyone going by the name of “Drake Cula” or “Tu Fang” 
 # is clearly a vampire, because come on. In that case, 
 # you should print “Definitely a vampire.”
 
-when name == "Drake"
-  puts "Definitely a vampire!"
+r = "Definitely a vampire!" if emp_name == "Drake Cula" || emp_name == "Tu Fang" 
+
+puts r
 
 # Otherwise, print “Results inconclusive.”
-else
-  puts "Results inconclusive"
-end  
-
+if r 
+ puts r
+ else puts "Results inconclusive."
+end 
