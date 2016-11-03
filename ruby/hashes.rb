@@ -25,12 +25,23 @@ puts "Decor theme preferences"
 
 client_file[:decor_theme] = gets.chomp
 
-client_file.each {|k,v| puts k,v}
+puts client_file
 
 puts "Would you like to make some changes? If so please type criteria otherwise type 'none'"
 
 change = gets.chomp.to_sym
 
+if change == :none
+    p client_file
+  else 
+    puts "Please enter new information"
+    updated_info = gets.chomp
+      if change == :age
+         updated_info.to_i
+      end
+    client_file[change] = updated_info
+    client_file.each {|k,v| puts k,v}
+end  
 
 
 
