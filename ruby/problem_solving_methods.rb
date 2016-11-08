@@ -1,21 +1,18 @@
 # Release 0: Implement a Simple Search
-arr = [42, 89, 23, 1]
 
 def search_array(array, integer)
   fibs = {}
   index = 0
   while index < array.length 
-  array.each do |x|
-    if x == array.first 
-      fibs[x] = index 
-    else 
-      fibs[x] = index
-    end
-  index += 1 
-  end
+      array.each do |x|
+        fibs[x] = index 
+        index += 1 
+      end
   end
   fibs[integer]
 end 
+
+arr = [42, 89, 23, 1]
 search_array(arr, 23)
 
 # Release 1: Calculate Fibonacci Numbers
@@ -38,6 +35,35 @@ p fib_seq(100)
  
 # Release 2: Sort an Array 
  
-#the bubble sort algorithm sorts a collection by moving from left to right, comparing a value with the
-#next value to determine which value is higher (or lower depending on the goal). Typically it iterates 
-#through the entire list many times in order to properly sort a collection.
+# The bubble sort algorithm:
+# - Sorts an array of numbers by moving from left to right.
+# - Compare a value with the next value to determine
+# which value is higher. 
+# - If next one is higher then these two values must be swapped.
+# - If both are in already sorted positions then 
+# move to the next two values. 
+# - Iterate through the entire list many times in order to properly sort a collection.
+# - And when there's no swap required, an array is completely sorted.
+
+def bubble_sort(arr)
+  l = arr.length
+
+  loop do
+    swapped = false
+
+    (l-1).times do |i|
+      if arr[i] > arr[i+1]
+        arr[i], arr[i+1] = arr[i+1], arr[i]
+        swapped = true
+      end
+    end
+
+    break if not swapped
+  end
+
+  arr
+end
+
+a=[1,3,9,15,39,2,3,4]
+
+bubble_sort(a)
