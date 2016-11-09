@@ -20,6 +20,10 @@ class Puppy
   def yawn
     p "Yawn"
   end
+  
+  def initialize
+   p "Initializing new puppy instance ..."
+  end
 
 end
 
@@ -29,3 +33,29 @@ spot.speak(2)
 spot.yawn
 spot.fetch("toy")
 spot.dog_years(45)
+
+class Coffee_beans
+  
+  def initialize
+    p "Initializing new coffee beans instance ..."
+    @ground = false
+  end
+
+  def grind(int=1)
+    p "Grinding #{int} ounces of coffee beans!" 
+    @ground= true   
+  end
+
+  def brew
+    if @ground == false
+    p "You have to grind your beans first!"  
+    elsif @ground == true
+    p "Enjoy your coffee)"
+    end
+  end
+
+end
+
+arabica = Coffee_beans.new
+arabica.brew
+arabica.grind.brew
