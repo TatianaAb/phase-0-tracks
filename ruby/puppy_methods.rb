@@ -43,13 +43,14 @@ class Coffee_beans
 
   def grind(int=1)
     p "Grinding #{int} ounces of coffee beans!" 
-    @ground= true   
+    @ground = true 
+    self
   end
 
   def brew
     if @ground == false
     p "You have to grind your beans first!"  
-    elsif @ground == true
+    else
     p "Enjoy your coffee)"
     end
   end
@@ -57,5 +58,5 @@ class Coffee_beans
 end
 
 arabica = Coffee_beans.new
-arabica.brew
-arabica.grind.brew
+ arabica.brew
+ arabica.grind.brew
