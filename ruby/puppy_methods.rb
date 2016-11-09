@@ -60,3 +60,26 @@ end
 arabica = Coffee_beans.new
  arabica.brew
  arabica.grind.brew
+
+batch=(1..50).to_a
+
+batch.map! do |x|
+  x = Coffee_beans.new
+end
+
+batch.each {|x| x.grind(4).brew }
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
