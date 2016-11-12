@@ -65,10 +65,12 @@ batch=(1..50).to_a
 
 batch.map! do |x|
   x = Coffee_beans.new
+  x
 end
 
 batch.each {|x| x.grind(4).brew }
 
+1.grind
    
 
 

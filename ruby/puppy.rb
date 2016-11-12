@@ -1,20 +1,20 @@
-SPECIES ------------------------
-Puppy
+# SPECIES ------------------------
+# Puppy
 
-CHARACTERISTICS ----------------
-Weight: varies
-Friendly: yes
-Paw count: 4
-Name: varies
-Color: varies
-Food: puppies_food
+# CHARACTERISTICS ----------------
+# Weight: varies
+# Friendly: yes
+# Paw count: 4
+# Name: varies
+# Color: varies
+# Food: puppies_food
 
-BEHAVIOR -----------------------
-Run
-Lick
-Play
-Sleep
-Bark
+# BEHAVIOR -----------------------
+# Run
+# Lick
+# Play
+# Sleep
+# Bark
 
 class Puppy
 end
