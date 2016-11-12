@@ -19,7 +19,7 @@ search_array(arr, 23)
  
 #Write the Fibonacci sequence which is the sum of prior 2 integers and the last integer ex. 1+2 = 3 then 2+3 = 5.
 
-fibs = []
+
 def fib_seq(n)
   fibs = [0,1]  
   until n == fibs.length 
