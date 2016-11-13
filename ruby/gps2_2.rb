@@ -71,3 +71,10 @@ def print_list(list)
   list.each { |item, qty| puts "Buy #{qty} #{item}" }
 
 end
+
+What did you learn about pseudocode from working on this challenge?
+What are the tradeoffs of using arrays and hashes for this challenge?
+What does a method return?
+What kind of things can you pass into methods as arguments?
+How can you pass information between methods?
+What concepts were solidified in this challenge, and what concepts are still confusing?
