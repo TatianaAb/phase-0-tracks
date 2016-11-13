@@ -72,9 +72,22 @@ def print_list(list)
 
 end
 
-What did you learn about pseudocode from working on this challenge?
-What are the tradeoffs of using arrays and hashes for this challenge?
-What does a method return?
-What kind of things can you pass into methods as arguments?
-How can you pass information between methods?
-What concepts were solidified in this challenge, and what concepts are still confusing?
+# - What did you learn about pseudocode from working on this challenge?
+#      I've learned that pseudocode is very helpful.
+# When you wright an actual code it keeps you on right track. 
+
+# - What are the tradeoffs of using arrays and hashes for this challenge?
+#      We were using hashes as it was more convenient for key-value pairs.
+
+# - What does a method return?
+#    Method returns return value of its last statement
+
+# - What kind of things can you pass into methods as arguments? 
+#    We can pass all kind of things like arrays, hashes, integers and ranges
+
+# - How can you pass information between methods?
+#     Wrap them into same class and pass informarion using class variable. 
+
+# - What concepts were solidified in this challenge, 
+# and what concepts are still confusing?
+#     This challange was good for refresh knowledge of using methods. 
