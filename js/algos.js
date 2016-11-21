@@ -1,10 +1,11 @@
 // Release 0: Find the Longest Phrase
+
 // Take an array and loop trough each element in it.
 // IF length of first element less then length of second,
 //  then delete first element
 //  ELSE 
 //  delete second element
-//  
+ 
 //  RETURN first element which is also the only element left in array.
 
 function longestPhrase (b){
@@ -36,8 +37,16 @@ return output;
 }
 
 // Release 2: Generate Random Test Data
-Take any number.
-
+// Take any number and set it as an length of array.
+// Create a contractor function.
+// Set a new empty array and string of alphabet letters.
+// Create a function for creating random word:
+// Use Math function to create random number and set it as a length of new word
+// and that many times take a random character from alphabet string (via index which is also random number)
+//  Return created string
+//  Create new function to push these string to an empty array 
+//  While given length not reached. 
+// Return an Array.
 
 function CreateArray (arrayLength){
   this.arrayLength = arrayLength;
@@ -50,21 +59,23 @@ function CreateArray (arrayLength){
     for (i=1; i<=this.stringLength; i++){
       this.index = Math.floor(Math.random() * 26); 
       this.string += this.alphabet[this.index];
-  }
+    }
   return this.string;
   };
    
   this.randomArray = function (){
   for (t=0; t<this.arrayLength; t++){
     this.newArray.push(this.randomString());
-  }
-return this.newArray;
-};
-}
+   }
+  return this.newArray;
+  };
+
 } 
 
 
 // Driver Code for Release 2 Generate Random Test Data
+// 10 times create new arrays for our constructor function.
+// print created array and longest "word" in it
 
  for (p=0; p<10; p++){
  var x = new CreateArray(5).randomArray();
