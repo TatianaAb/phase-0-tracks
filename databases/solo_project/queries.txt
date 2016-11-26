@@ -1,0 +1,66 @@
+CREATE TABLE garage (
+  id INTEGER PRIMARY KEY,
+  model VARCHAR(255),
+  make_id INT,
+  color VARCHAR(255),
+  convertible BOOLEAN,
+  spot_number INT,
+  FOREIGN KEY (make_id) REFERENCES makes(id)
+);
+
+CREATE TABLE makes (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(255),
+  premium BOOLEAN
+);
+
+INSERT INTO garage (model, make_id, color, convertible, spot_number) VALUES ("Corolla", 1, "red", 'false', 13);
+INSERT INTO garage (model, make_id, color, convertible, spot_number) VALUES ("Camry", 1, "gray", 'false', 20);
+INSERT INTO garage (model, make_id, color, convertible, spot_number) VALUES ("Impala", 2, "red", 'true', 5);
+INSERT INTO garage (model, make_id, color, convertible, spot_number) VALUES ("Equinox", 2, "blue", 'false', 15);
+INSERT INTO garage (model, make_id, color, convertible, spot_number) VALUES ("Rav4", 1, "white", 'true', 1);
+INSERT INTO garage (model, make_id, color, convertible, spot_number) VALUES ("4Runner", 1, "black", 'false', 4);
+INSERT INTO makes (name, premium) VALUES ("Toyota", 'false');
+INSERT INTO makes (name, premium) VALUES ("Chevy", 'true');
+
+
+Run a SQL query for each of the following:
+
+1. Display the information in one table (either table is fine).
+query: 
+SELECT * FROM makes;
+output: 
+1|Toyota|false
+2|Chevy|true
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+query:
+UPDATE makes SET premium='false' WHERE name = "Chevy"
+
+3. Display the information in both tables using one query.
+query:
+SELECT * FROM garage, makes WHERE garage.make_id = makes.id;
+output:
+1|Corolla|1|red|false|13|1|Toyota|false
+2|Camry|1|gray|false|20|1|Toyota|false
+3|Impala|2|red|true|5|2|Chevy|false
+4|Equinox|2|blue|false|15|2|Chevy|false
+5|Rav4|1|white|true|1|1|Toyota|false
+6|4Runner|1|black|false|4|1|Toyota|false
+7|Suburban|2|black|false|3|2|Chevy|false
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+query:
+SELECT makes.name, garage.model, garage.color FROM garage JOIN makes ON garage.make_id = makes.id;
+output:
+Toyota|Corolla|red
+Toyota|Camry|gray
+Chevy|Impala|red
+Chevy|Equinox|blue
+Toyota|Rav4|white
+Toyota|4Runner|black
+Chevy|Suburban|black
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+query:
+DELETE FROM garage WHERE model = Impala;
