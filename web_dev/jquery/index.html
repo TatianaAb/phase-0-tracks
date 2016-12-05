@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> My jQuery test web page!!! </title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+$(document).ready(function(){
+    $("h1").click(function(){
+        $(this).hide();
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#li1").fadeOut();
+        $("#li2").fadeOut("slow");
+        $("#li3").fadeOut(3000);
+    });
+});
+</script>
+  </head>
+  <body>
+    
+    <h1> I really enjoying this learning process !)</h1>
+    <button> Click to fade out </button>
+
+    <ul>
+      <li id="li1">Its fun </li>
+      <li id="li2">Its interesting </li>
+      <li id="li3">I can do this for a living </li>
+    </ul>
+           
+    <p>I found <a href="http://www.w3schools.com/jquery/jquery_get_started.asp"> this </a> source <em>very</em> helpful !</p>
+    <strong>Warning.</strong> Don't forget to save your job.
+  </body>
+</html>
